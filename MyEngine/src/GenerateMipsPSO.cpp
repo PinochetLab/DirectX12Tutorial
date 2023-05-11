@@ -42,17 +42,6 @@ GenerateMipsPSO::GenerateMipsPSO( Device& device )
         CD3DX12_PIPELINE_STATE_STREAM_CS             CS;
     } pipelineStateStream;
 
-    WCHAR* szFileName;
-    LPCSTR szEntryPoint;
-    LPCSTR szShaderModel;
-    DWORD dwShaderFlags = D3DCOMPILE_ENABLE_STRICTNESS;
-#if defined(DEBUG) || defined(_DEBUG)
-    dwShaderFlags |= D3DCOMPILE_DEBUG;
-#endif
-    ID3DBlob** ppBlobOut;
-    ID3DBlob* pErrorBlob;
-    D3DCompileFromFile(szFileName, nullptr, nullptr, szEntryPoint, szShaderModel, dwShaderFlags, 0, ppBlobOut, &pErrorBlob);
-
     pipelineStateStream.pRootSignature = m_RootSignature->GetD3D12RootSignature().Get();
     pipelineStateStream.CS             = { g_GenerateMips_CS, sizeof( g_GenerateMips_CS ) };
 
