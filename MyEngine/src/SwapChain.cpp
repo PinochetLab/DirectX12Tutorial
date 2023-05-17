@@ -1,15 +1,15 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/SwapChain.h>
+#include "../inc/dx12lib/SwapChain.h"
 
-#include <dx12lib/Adapter.h>
-#include <dx12lib/CommandList.h>
-#include <dx12lib/CommandQueue.h>
-#include <dx12lib/Device.h>
-#include <dx12lib/GUI.h>
-#include <dx12lib/RenderTarget.h>
-#include <dx12lib/ResourceStateTracker.h>
-#include <dx12lib/Texture.h>
+#include "../inc/dx12lib/Adapter.h"
+#include "../inc/dx12lib/CommandList.h"
+#include "../inc/dx12lib/CommandQueue.h"
+#include "../inc/dx12lib/Device.h"
+#include "../inc/dx12lib/GUI.h"
+#include "../inc/dx12lib/RenderTarget.h"
+#include "../inc/dx12lib/ResourceStateTracker.h"
+#include "../inc/dx12lib/Texture.h"
 
 using namespace dx12lib;
 
@@ -121,8 +121,8 @@ void SwapChain::Resize( uint32_t width, uint32_t height )
 {
     if ( m_Width != width || m_Height != height )
     {
-        m_Width  = std::max( 1u, width );
-        m_Height = std::max( 1u, height );
+        m_Width  = max( 1u, width );
+        m_Height = max( 1u, height );
 
         m_Device.Flush();
 

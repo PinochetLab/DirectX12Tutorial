@@ -49,8 +49,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_IRR_IMPORTER
 
-#include "Irr/IRRLoader.h"
-#include "Common/Importer.h"
+#include "../Irr/IRRLoader.h"
+#include "../Common/Importer.h"
 
 #include <assimp/ParsingUtils.h>
 #include <assimp/fast_atof.h>

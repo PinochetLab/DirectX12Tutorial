@@ -141,9 +141,6 @@
     <ClCompile Include="extern\assimp\code\BVH\BVHLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="extern\assimp\code\C4D\C4DImporter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="extern\assimp\code\CApi\AssimpCExport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -657,213 +654,6 @@
     <ClCompile Include="extern\assimp\contrib\clipper\clipper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\codegear\gtest_all.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\codegear\gtest_link.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample1.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample1_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample2.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample2_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample3_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample4.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample4_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample5_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample6_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample7_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample8_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample9_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample10_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest_main.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-all.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-death-test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-filepath.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-port.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-printers.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-test-part.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-typed-test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_all_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_break_on_failure_unittest_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_catch_exceptions_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_color_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_env_var_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_environment_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_filter_unittest_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_help_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_list_tests_unittest_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_main_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_no_test_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_output_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_pred_impl_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_premature_exit_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_prod_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_repeat_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_shuffle_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_sole_header_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_stress_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_throw_on_failure_ex_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_throw_on_failure_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_uninitialized_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_unittest.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_xml_outfile1_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_xml_outfile2_test_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_xml_output_unittest_.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-death-test_ex_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-death-test_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-filepath_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-linked_ptr_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-listener_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-message_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-options_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-param-test_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-param-test2_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-port_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-printers_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-test-part_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-tuple_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-typed-test_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-typed-test2_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-unittest-api_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\test\production.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\xcode\Samples\FrameworkSample\widget.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\gtest\xcode\Samples\FrameworkSample\widget_test.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="extern\assimp\contrib\irrXML\irrXML.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -943,9 +733,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream\test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream\zfstream.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream2\zstream_test.cpp">
@@ -1425,9 +1212,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="extern\assimp\code\BVH\BVHLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\code\C4D\C4DImporter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="extern\assimp\code\CApi\CInterfaceIOWrapper.h">
@@ -1919,108 +1703,6 @@
     <ClInclude Include="extern\assimp\contrib\clipper\clipper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\custom\gtest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\custom\gtest-port.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\custom\gtest-printers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-death-test-internal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-filepath.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-internal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-linked_ptr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-param-util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-param-util-generated.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-port.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-port-arch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-string.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-tuple.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-type-util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest_pred_impl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest_prod.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-death-test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-message.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-param-test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-printers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-spi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-test-part.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-typed-test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\prime_tables.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample3-inl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\src\gtest-internal-inl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\test\gtest-param-test_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\test\gtest-typed-test_test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\test\production.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\gtest\xcode\Samples\FrameworkSample\widget.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="extern\assimp\contrib\irrXML\CXMLReaderImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2283,9 +1965,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\infback9\inftree9.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="extern\assimp\contrib\zlib\contrib\iostream\zfstream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\iostream2\zstream.h">
@@ -2966,9 +2645,6 @@
     <ClInclude Include="inc\imgui\imstb_truetype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GenerateMips_CS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="VertexShader.hlsl">
@@ -3100,6 +2776,9 @@
     <None Include="extern\DirectXTex\DirectXTex\DirectXTex.inl">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="extern\assimp\include\assimp\config.h.in" />
+    <None Include="extern\assimp\contrib\zlib\zconf.h.in" />
+    <None Include="extern\assimp\revision.h.in" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="extern\assimp\code\res\assimp.rc">

@@ -59,7 +59,8 @@ using namespace DirectX;
 #include <cassert>
 #include <chrono>
 #include <condition_variable>
-#include <filesystem>
+#include <experimental/filesystem>
+#include <compare>
 #include <functional>
 #include <map>
 #include <memory>
@@ -71,11 +72,7 @@ using namespace DirectX;
 #include <unordered_map>
 #include <vector>
 
-#if defined( __cpp_lib_filesystem )
-namespace fs = std::filesystem;
-#else
 namespace fs = std::experimental::filesystem;
-#endif
 
 // Assimp header files.
 #include "../extern/assimp/include/assimp/Exporter.hpp"

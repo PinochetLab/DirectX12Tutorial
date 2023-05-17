@@ -3182,7 +3182,7 @@ void ColladaParser::ReportWarning(const char* msg, ...)
     va_start(args, msg);
 
     char szBuffer[3000];
-    const int iLen = vsprintf(szBuffer, msg, args);
+    const int iLen = vsprintf_s(szBuffer, msg, args);
     ai_assert(iLen > 0);
 
     va_end(args);

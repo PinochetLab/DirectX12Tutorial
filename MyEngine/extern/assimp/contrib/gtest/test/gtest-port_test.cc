@@ -31,7 +31,7 @@
 //
 // This file tests the internal cross-platform support utilities.
 
-#include "gtest/internal/gtest-port.h"
+#include "../include/gtest/internal/gtest-port.h"
 
 #include <stdio.h>
 
@@ -43,8 +43,8 @@
 #include <utility>  // For std::pair and std::make_pair.
 #include <vector>
 
-#include "gtest/gtest.h"
-#include "gtest/gtest-spi.h"
+#include "../include/gtest/gtest.h"
+#include "../include/gtest/gtest-spi.h"
 
 // Indicates that this translation unit is part of Google Test's
 // implementation.  It must come before gtest-internal-inl.h is
@@ -52,7 +52,7 @@
 // prevent a user from accidentally including gtest-internal-inl.h in
 // his code.
 #define GTEST_IMPLEMENTATION_ 1
-#include "src/gtest-internal-inl.h"
+#include "../src/gtest-internal-inl.h"
 #undef GTEST_IMPLEMENTATION_
 
 using std::make_pair;

@@ -42,10 +42,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_GLTF_IMPORTER
 
-#include "glTF/glTFImporter.h"
-#include "glTF/glTFAsset.h"
-#include "glTF/glTFAssetWriter.h"
-#include "PostProcessing/MakeVerboseFormat.h"
+#include "../glTF/glTFImporter.h"
+#include "../glTF/glTFAsset.h"
+#include "../glTF/glTFAssetWriter.h"
+#include "../PostProcessing/MakeVerboseFormat.h"
 
 #include <assimp/StringComparison.h>
 #include <assimp/StringUtils.h>

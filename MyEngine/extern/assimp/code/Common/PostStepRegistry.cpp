@@ -48,91 +48,91 @@ directly (unless you are adding new steps), instead use the
 corresponding preprocessor flag to selectively disable steps.
 */
 
-#include "PostProcessing/ProcessHelper.h"
+#include "../PostProcessing/ProcessHelper.h"
 
 #ifndef ASSIMP_BUILD_NO_CALCTANGENTS_PROCESS
-#   include "PostProcessing/CalcTangentsProcess.h"
+#   include "../PostProcessing/CalcTangentsProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_JOINVERTICES_PROCESS
-#   include "PostProcessing/JoinVerticesProcess.h"
+#   include "../PostProcessing/JoinVerticesProcess.h"
 #endif
 #if !(defined ASSIMP_BUILD_NO_MAKELEFTHANDED_PROCESS && defined ASSIMP_BUILD_NO_FLIPUVS_PROCESS && defined ASSIMP_BUILD_NO_FLIPWINDINGORDER_PROCESS)
-#   include "PostProcessing/ConvertToLHProcess.h"
+#   include "../PostProcessing/ConvertToLHProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_TRIANGULATE_PROCESS
-#   include "PostProcessing/TriangulateProcess.h"
+#   include "../PostProcessing/TriangulateProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_DROPFACENORMALS_PROCESS
-#   include "PostProcessing/DropFaceNormalsProcess.h"
+#   include "../PostProcessing/DropFaceNormalsProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_GENFACENORMALS_PROCESS
-#   include "PostProcessing/GenFaceNormalsProcess.h"
+#   include "../PostProcessing/GenFaceNormalsProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_GENVERTEXNORMALS_PROCESS
-#   include "PostProcessing/GenVertexNormalsProcess.h"
+#   include "../PostProcessing/GenVertexNormalsProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_REMOVEVC_PROCESS
-#   include "PostProcessing/RemoveVCProcess.h"
+#   include "../PostProcessing/RemoveVCProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_SPLITLARGEMESHES_PROCESS
-#   include "PostProcessing/SplitLargeMeshes.h"
+#   include "../PostProcessing/SplitLargeMeshes.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_PRETRANSFORMVERTICES_PROCESS
-#   include "PostProcessing/PretransformVertices.h"
+#   include "../PostProcessing/PretransformVertices.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_LIMITBONEWEIGHTS_PROCESS
-#   include "PostProcessing/LimitBoneWeightsProcess.h"
+#   include "../PostProcessing/LimitBoneWeightsProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_VALIDATEDS_PROCESS
-#   include "PostProcessing/ValidateDataStructure.h"
+#   include "../PostProcessing/ValidateDataStructure.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_IMPROVECACHELOCALITY_PROCESS
-#   include "PostProcessing/ImproveCacheLocality.h"
+#   include "../PostProcessing/ImproveCacheLocality.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_FIXINFACINGNORMALS_PROCESS
-#   include "PostProcessing/FixNormalsStep.h"
+#   include "../PostProcessing/FixNormalsStep.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_REMOVE_REDUNDANTMATERIALS_PROCESS
-#   include "PostProcessing/RemoveRedundantMaterials.h"
+#   include "../PostProcessing/RemoveRedundantMaterials.h"
 #endif
 #if (!defined ASSIMP_BUILD_NO_EMBEDTEXTURES_PROCESS)
-#   include "PostProcessing/EmbedTexturesProcess.h"
+#   include "../PostProcessing/EmbedTexturesProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_FINDINVALIDDATA_PROCESS
-#   include "PostProcessing/FindInvalidDataProcess.h"
+#   include "../PostProcessing/FindInvalidDataProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_FINDDEGENERATES_PROCESS
-#   include "PostProcessing/FindDegenerates.h"
+#   include "../PostProcessing/FindDegenerates.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_SORTBYPTYPE_PROCESS
-#   include "PostProcessing/SortByPTypeProcess.h"
+#   include "../PostProcessing/SortByPTypeProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_GENUVCOORDS_PROCESS
-#   include "PostProcessing/ComputeUVMappingProcess.h"
+#   include "../PostProcessing/ComputeUVMappingProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_TRANSFORMTEXCOORDS_PROCESS
-#   include "PostProcessing/TextureTransform.h"
+#   include "../PostProcessing/TextureTransform.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_FINDINSTANCES_PROCESS
-#   include "PostProcessing/FindInstancesProcess.h"
+#   include "../PostProcessing/FindInstancesProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_OPTIMIZEMESHES_PROCESS
-#   include "PostProcessing/OptimizeMeshes.h"
+#   include "../PostProcessing/OptimizeMeshes.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_OPTIMIZEGRAPH_PROCESS
-#   include "PostProcessing/OptimizeGraph.h"
+#   include "../PostProcessing/OptimizeGraph.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_SPLITBYBONECOUNT_PROCESS
-#   include "Common/SplitByBoneCountProcess.h"
+#   include "../Common/SplitByBoneCountProcess.h"
 #endif
 #ifndef ASSIMP_BUILD_NO_DEBONE_PROCESS
-#   include "PostProcessing/DeboneProcess.h"
+#   include "../PostProcessing/DeboneProcess.h"
 #endif
 #if (!defined ASSIMP_BUILD_NO_GLOBALSCALE_PROCESS)
-#   include "PostProcessing/ScaleProcess.h"
+#   include "../PostProcessing/ScaleProcess.h"
 #endif
 #if (!defined ASSIMP_BUILD_NO_GENBOUNDINGBOXES_PROCESS)
-#   include "PostProcessing/GenBoundingBoxesProcess.h"
+#   include "../PostProcessing/GenBoundingBoxesProcess.h"
 #endif
 
 

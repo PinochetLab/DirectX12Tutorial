@@ -56,7 +56,7 @@
 #include <string>
 #include <vector>
 
-#include "gtest/internal/gtest-port.h"
+#include "../include/gtest/internal/gtest-port.h"
 
 #if GTEST_CAN_STREAM_RESULTS_
 # include <arpa/inet.h>  // NOLINT
@@ -67,8 +67,8 @@
 # include <windows.h>  // NOLINT
 #endif  // GTEST_OS_WINDOWS
 
-#include "gtest/gtest.h"  // NOLINT
-#include "gtest/gtest-spi.h"
+#include "../include/gtest/gtest.h"  // NOLINT
+#include "../include/gtest/gtest-spi.h"
 
 namespace testing {
 
@@ -163,7 +163,7 @@ class GTestFlagSaver {
  public:
   // The c'tor.
   GTestFlagSaver() {
-    also_run_disabled_tests_ = GTEST_FLAG(also_run_disabled_tests);
+    /*also_run_disabled_tests_ = GTEST_FLAG(also_run_disabled_tests);
     break_on_failure_ = GTEST_FLAG(break_on_failure);
     catch_exceptions_ = GTEST_FLAG(catch_exceptions);
     color_ = GTEST_FLAG(color);
@@ -179,12 +179,12 @@ class GTestFlagSaver {
     shuffle_ = GTEST_FLAG(shuffle);
     stack_trace_depth_ = GTEST_FLAG(stack_trace_depth);
     stream_result_to_ = GTEST_FLAG(stream_result_to);
-    throw_on_failure_ = GTEST_FLAG(throw_on_failure);
+    throw_on_failure_ = GTEST_FLAG(throw_on_failure);*/
   }
 
   // The d'tor is not virtual.  DO NOT INHERIT FROM THIS CLASS.
   ~GTestFlagSaver() {
-    GTEST_FLAG(also_run_disabled_tests) = also_run_disabled_tests_;
+    /*GTEST_FLAG(also_run_disabled_tests) = also_run_disabled_tests_;
     GTEST_FLAG(break_on_failure) = break_on_failure_;
     GTEST_FLAG(catch_exceptions) = catch_exceptions_;
     GTEST_FLAG(color) = color_;
@@ -200,7 +200,7 @@ class GTestFlagSaver {
     GTEST_FLAG(shuffle) = shuffle_;
     GTEST_FLAG(stack_trace_depth) = stack_trace_depth_;
     GTEST_FLAG(stream_result_to) = stream_result_to_;
-    GTEST_FLAG(throw_on_failure) = throw_on_failure_;
+    GTEST_FLAG(throw_on_failure) = throw_on_failure_;*/
   }
 
  private:

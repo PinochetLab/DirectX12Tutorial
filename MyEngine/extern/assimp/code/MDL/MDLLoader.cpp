@@ -48,9 +48,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_MDL_IMPORTER
 
-#include "MDL/MDLLoader.h"
-#include "MDL/MDLDefaultColorMap.h"
-#include "MD2/MD2FileData.h"
+#include "../MDL/MDLLoader.h"
+#include "../MDL/MDLDefaultColorMap.h"
+#include "../MD2/MD2FileData.h"
 
 #include <assimp/Macros.h>
 #include <assimp/qnan.h>

@@ -33,7 +33,7 @@
 //
 // This file tests the universal value printer.
 
-#include "gtest/gtest-printers.h"
+#include "../include/gtest/gtest-printers.h"
 
 #include <ctype.h>
 #include <limits.h>
@@ -48,15 +48,16 @@
 #include <utility>
 #include <vector>
 
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 
 // hash_map and hash_set are available under Visual C++, or on Linux.
-#if GTEST_HAS_HASH_MAP_
-# include <hash_map>            // NOLINT
-#endif  // GTEST_HAS_HASH_MAP_
-#if GTEST_HAS_HASH_SET_
-# include <hash_set>            // NOLINT
-#endif  // GTEST_HAS_HASH_SET_
+#include <unordered_map>
+//#if GTEST_HAS_HASH_MAP_
+//# include <map>            // NOLINT
+//#endif  // GTEST_HAS_HASH_MAP_
+//#if GTEST_HAS_HASH_SET_
+//# include <hash_set>            // NOLINT
+//#endif  // GTEST_HAS_HASH_SET_
 
 #if GTEST_HAS_STD_FORWARD_LIST_
 # include <forward_list> // NOLINT
@@ -217,17 +218,17 @@ using ::testing::internal::string;
 // The hash_* classes are not part of the C++ standard.  STLport
 // defines them in namespace std.  MSVC defines them in ::stdext.  GCC
 // defines them in ::.
-#ifdef _STLP_HASH_MAP  // We got <hash_map> from STLport.
-using ::std::hash_map;
-using ::std::hash_set;
-using ::std::hash_multimap;
-using ::std::hash_multiset;
-#elif _MSC_VER
-using ::stdext::hash_map;
-using ::stdext::hash_set;
-using ::stdext::hash_multimap;
-using ::stdext::hash_multiset;
-#endif
+//#ifdef _STLP_HASH_MAP  // We got <hash_map> from STLport.
+//using ::std::hash_map;
+//using ::std::hash_set;
+//using ::std::hash_multimap;
+//using ::std::hash_multiset;
+//#elif _MSC_VER
+//using ::stdext::hash_map;
+//using ::stdext::hash_set;
+//using ::stdext::hash_multimap;
+//using ::stdext::hash_multiset;
+//#endif
 
 // Prints a value to a string using the universal value printer.  This
 // is a helper for testing UniversalPrinter<T>::Print() for various types.
@@ -816,13 +817,13 @@ TEST(PrintStlContainerTest, NonEmptyDeque) {
 #if GTEST_HAS_HASH_MAP_
 
 TEST(PrintStlContainerTest, OneElementHashMap) {
-  hash_map<int, char> map1;
+  std::unordered_map<int, char> map1;
   map1[1] = 'a';
   EXPECT_EQ("{ (1, 'a' (97, 0x61)) }", Print(map1));
 }
 
 TEST(PrintStlContainerTest, HashMultiMap) {
-  hash_multimap<int, bool> map1;
+  std::multimap<int, bool> map1;
   map1.insert(make_pair(5, true));
   map1.insert(make_pair(5, false));
 
@@ -838,7 +839,7 @@ TEST(PrintStlContainerTest, HashMultiMap) {
 #if GTEST_HAS_HASH_SET_
 
 TEST(PrintStlContainerTest, HashSet) {
-  hash_set<string> set1;
+  std::set<string> set1;
   set1.insert("hello");
   EXPECT_EQ("{ \"hello\" }", Print(set1));
 }
@@ -846,7 +847,7 @@ TEST(PrintStlContainerTest, HashSet) {
 TEST(PrintStlContainerTest, HashMultiSet) {
   const int kSize = 5;
   int a[kSize] = { 1, 1, 2, 5, 1 };
-  hash_multiset<int> set1(a, a + kSize);
+  std::multiset<int> set1(a, a + kSize);
 
   // Elements of hash_multiset can be printed in any order.
   const string result = Print(set1);

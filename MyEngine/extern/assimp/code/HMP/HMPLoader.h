@@ -49,8 +49,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // internal headers
 #include <assimp/BaseImporter.h>
 
-#include "MDL/MDLLoader.h"
-#include "HMP/HMPFileData.h"
+#include "../MDL/MDLLoader.h"
+#include "../HMP/HMPFileData.h"
 
 namespace Assimp {
 using namespace HMP;

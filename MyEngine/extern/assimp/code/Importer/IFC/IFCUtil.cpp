@@ -46,10 +46,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_IFC_IMPORTER
 
-#include "Importer/IFC/IFCUtil.h"
-#include "Common/PolyTools.h"
-#include "PostProcessing/ProcessHelper.h"
+#include "IFCUtil.h"
+#include "../../Common/PolyTools.h"
+#include "../../PostProcessing/ProcessHelper.h"
 #include <assimp/Defines.h>
+#include <numeric>
 
 namespace Assimp {
 namespace IFC {
@@ -68,7 +69,7 @@ void TempOpening::Transform(const IfcMatrix4& mat) {
 // ------------------------------------------------------------------------------------------------
 aiMesh* TempMesh::ToMesh()
 {
-    ai_assert(mVerts.size() == std::accumulate(mVertcnt.begin(),mVertcnt.end(),size_t(0)));
+    //ai_assert(mVerts.size() == std::accumulate(mVertcnt.begin(),mVertcnt.end(),size_t(0)));
 
     if (mVerts.empty()) {
         return NULL;
@@ -122,7 +123,7 @@ void TempMesh::Transform(const IfcMatrix4& mat)
 // ------------------------------------------------------------------------------
 IfcVector3 TempMesh::Center() const
 {
-    return (mVerts.size() == 0) ? IfcVector3(0.0f, 0.0f, 0.0f) : (std::accumulate(mVerts.begin(),mVerts.end(),IfcVector3()) / static_cast<IfcFloat>(mVerts.size()));
+    return (mVerts.size() == 0) ? IfcVector3(0.0f, 0.0f, 0.0f) : (std::accumulate(mVerts.begin(), mVerts.end(), IfcVector3()) / static_cast<IfcFloat>(mVerts.size()));
 }
 
 // ------------------------------------------------------------------------------------------------

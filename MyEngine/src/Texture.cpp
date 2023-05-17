@@ -1,10 +1,10 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/Texture.h>
+#include "../inc/dx12lib/Texture.h"
 
-#include <dx12lib/Device.h>
-#include <dx12lib/Helpers.h>
-#include <dx12lib/ResourceStateTracker.h>
+#include "../inc/dx12lib/Device.h"
+#include "../inc/dx12lib/Helpers.h"
+#include "../inc/dx12lib/ResourceStateTracker.h"
 
 using namespace dx12lib;
 
@@ -31,8 +31,8 @@ void Texture::Resize( uint32_t width, uint32_t height, uint32_t depthOrArraySize
 
         CD3DX12_RESOURCE_DESC resDesc( m_d3d12Resource->GetDesc() );
 
-        resDesc.Width            = std::max( width, 1u );
-        resDesc.Height           = std::max( height, 1u );
+        resDesc.Width            = max( width, 1u );
+        resDesc.Height           = max( height, 1u );
         resDesc.DepthOrArraySize = depthOrArraySize;
         resDesc.MipLevels        = resDesc.SampleDesc.Count > 1 ? 1 : 0;
 

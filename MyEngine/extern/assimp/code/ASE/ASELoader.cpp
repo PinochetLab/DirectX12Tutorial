@@ -53,7 +53,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ASELoader.h"
 #include <assimp/StringComparison.h>
 #include <assimp/SkeletonMeshBuilder.h>
-#include "Common/TargetAnimation.h"
+#include "../Common/TargetAnimation.h"
 
 #include <assimp/Importer.hpp>
 #include <assimp/IOSystem.hpp>

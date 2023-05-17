@@ -1,6 +1,6 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/IndexBuffer.h>
+#include "../inc/dx12lib/IndexBuffer.h"
 
 #include <cassert>
 

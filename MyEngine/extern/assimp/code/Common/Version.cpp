@@ -105,11 +105,12 @@ ASSIMP_API unsigned int aiGetCompileFlags ()    {
 }
 
 // include current build revision, which is even updated from time to time -- :-)
-#include "revision.h"
+#include "../../../assimp/revision.h.in"
 
 // ------------------------------------------------------------------------------------------------
 ASSIMP_API unsigned int aiGetVersionRevision() {
-    return GitVersion;
+    //return GitVersion;
+    return 100;
 }
 
 ASSIMP_API const char *aiGetBranchName() {

@@ -473,7 +473,7 @@ void SMDImporter::CreateOutputNodes() {
     }
     else
     {
-        ::strcpy(pScene->mRootNode->mName.data, "<SMD_root>");
+        ::strcpy_s(pScene->mRootNode->mName.data, "<SMD_root>");
         pScene->mRootNode->mName.length = 10;
     }
 }
@@ -615,7 +615,7 @@ void SMDImporter::CreateOutputMaterials() {
 
         if (aszTextures[iMat].length())
         {
-            ::strncpy(szName.data, aszTextures[iMat].c_str(),MAXLEN-1);
+            ::strncpy_s(szName.data, aszTextures[iMat].c_str(),MAXLEN-1);
             szName.length = aszTextures[iMat].length();
             pcMat->AddProperty(&szName,AI_MATKEY_TEXTURE_DIFFUSE(0));
         }

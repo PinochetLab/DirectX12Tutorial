@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_EXPORT
 #ifndef ASSIMP_BUILD_NO_ASSXML_EXPORTER
 
-#include "PostProcessing/ProcessHelper.h"
+#include "../PostProcessing/ProcessHelper.h"
 
 #include <assimp/version.h>
 #include <assimp/IOStream.hpp>
@@ -55,11 +55,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <stdarg.h>
 
-#ifdef ASSIMP_BUILD_NO_OWN_ZLIB
-#   include <zlib.h>
-#else
-#   include <contrib/zlib/zlib.h>
-#endif
+#include "../../contrib/zlib/zlib.h"
 
 #include <time.h>
 #include <stdio.h>

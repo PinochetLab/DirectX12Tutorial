@@ -38,7 +38,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ----------------------------------------------------------------------
 */
 
-#include "code/Importer/StepFile/StepReaderGen.h"
+#include "StepReaderGen.h"
 
 namespace Assimp {
 using namespace StepFile;

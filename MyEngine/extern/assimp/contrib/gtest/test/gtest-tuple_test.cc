@@ -29,9 +29,9 @@
 //
 // Author: wan@google.com (Zhanyong Wan)
 
-#include "gtest/internal/gtest-tuple.h"
+#include "../include/gtest/internal/gtest-tuple.h"
 #include <utility>
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 
 namespace {
 

@@ -385,7 +385,8 @@ void DefaultLogger::WriteToStreams(const char *message, ErrorSeverity ErrorSev )
         // append a new-line character to the message to be printed
         lastLen = ::strlen(message);
         ::memcpy(lastMsg,message,lastLen+1);
-        ::strcat(lastMsg+lastLen,"\n");
+        char* buf;
+        ::strcat_s(lastMsg + lastLen, 1, "\n");
 
         message = lastMsg;
         noRepeatMsg = false;

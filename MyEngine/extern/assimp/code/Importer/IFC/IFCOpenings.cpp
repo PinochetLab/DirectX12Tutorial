@@ -46,8 +46,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_IFC_IMPORTER
 #include "IFCUtil.h"
-#include "Common/PolyTools.h"
-#include "PostProcessing/ProcessHelper.h"
+#include "../../Common/PolyTools.h"
+#include "../../PostProcessing/ProcessHelper.h"
 
 #ifdef ASSIMP_USE_HUNTER
 #  include <poly2tri/poly2tri.h>

@@ -62,9 +62,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdexcept>
 
 #define RAPIDJSON_HAS_STDSTRING 1
-#include <rapidjson/rapidjson.h>
-#include <rapidjson/document.h>
-#include <rapidjson/error/en.h>
+#include "../../contrib/rapidjson/include/rapidjson/rapidjson.h"
+#include "../../contrib/rapidjson/include/rapidjson/document.h"
+#include "../../contrib/rapidjson/include/rapidjson/error/en.h"
 
 #ifdef ASSIMP_API
 #   include <memory>
@@ -92,7 +92,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #   endif
 #endif
 
-#include "glTF/glTFCommon.h"
+#include "../glTF/glTFCommon.h"
 
 namespace glTF
 {

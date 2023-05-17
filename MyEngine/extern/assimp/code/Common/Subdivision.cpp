@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <assimp/Vertex.h>
 #include <assimp/ai_assert.h>
 
-#include "PostProcessing/ProcessHelper.h"
+#include "../PostProcessing/ProcessHelper.h"
 
 #include <stdio.h>
 

@@ -47,8 +47,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_HMP_IMPORTER
 
 // internal headers
-#include "HMP/HMPLoader.h"
-#include "MD2/MD2FileData.h"
+#include "../HMP/HMPLoader.h"
+#include "../MD2/MD2FileData.h"
 
 #include <assimp/IOSystem.hpp>
 #include <assimp/DefaultLogger.hpp>

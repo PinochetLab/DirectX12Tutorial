@@ -95,7 +95,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <assimp/StringUtils.h>
 
-#include "glTF/glTFCommon.h"
+#include "../glTF/glTFCommon.h"
 
 namespace glTF2
 {

@@ -52,8 +52,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_3D_IMPORTER
 
-#include "Unreal/UnrealLoader.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "../Unreal/UnrealLoader.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
 #include <assimp/StreamReader.h>
 #include <assimp/ParsingUtils.h>

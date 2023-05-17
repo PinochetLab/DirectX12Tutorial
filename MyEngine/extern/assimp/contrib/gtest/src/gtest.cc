@@ -31,9 +31,9 @@
 //
 // The Google C++ Testing Framework (Google Test)
 
-#include "gtest/gtest.h"
-#include "gtest/internal/custom/gtest.h"
-#include "gtest/gtest-spi.h"
+#include "../include/gtest/gtest.h"
+#include "../include/gtest/internal/custom/gtest.h"
+#include "../include/gtest/gtest-spi.h"
 
 #include <ctype.h>
 #include <math.h>
@@ -139,7 +139,7 @@
 // prevent a user from accidentally including gtest-internal-inl.h in
 // his code.
 #define GTEST_IMPLEMENTATION_ 1
-#include "src/gtest-internal-inl.h"
+#include "../src/gtest-internal-inl.h"
 #undef GTEST_IMPLEMENTATION_
 
 #if GTEST_OS_WINDOWS

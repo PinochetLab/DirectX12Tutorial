@@ -1,8 +1,8 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/PipelineStateObject.h>
+#include "../inc/dx12lib/PipelineStateObject.h"
 
-#include <dx12lib/Device.h>
+#include "../inc/dx12lib/Device.h"
 
 using namespace dx12lib;
 

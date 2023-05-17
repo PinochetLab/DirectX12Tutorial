@@ -53,14 +53,14 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <assimp/ParsingUtils.h>
 #include <assimp/fast_atof.h>
 #include <assimp/Subdivision.h>
-#include "Common/Importer.h"
+#include "../Common/Importer.h"
 #include <assimp/BaseImporter.h>
 #include <assimp/Importer.hpp>
 #include <assimp/light.h>
 #include <assimp/DefaultLogger.hpp>
 #include <assimp/material.h>
 #include <assimp/scene.h>
-#include <assimp/config.h>
+#include <assimp/config.h.in>
 #include <assimp/IOSystem.hpp>
 #include <assimp/importerdesc.h>
 #include <memory>

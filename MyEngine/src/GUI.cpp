@@ -11,9 +11,9 @@
 #include "../inc/dx12lib/Texture.h"
 
 // Include compiled shaders for ImGui.
-#include <ImGUI_PS.h>
-#include <ImGUI_VS.h>
-#include <imgui_impl_win32.h>
+#include "../../x64/Debug/ImGUI_PS.h"
+#include "../../x64/Debug/ImGUI_VS.h"
+#include "../inc/imgui/imgui_impl_win32.h"
 
 using namespace dx12lib;
 
@@ -160,8 +160,8 @@ GUI::GUI( Device& device, HWND hWnd, const RenderTarget& renderTarget )
     pipelineStateStream.pRootSignature        = m_RootSignature->GetD3D12RootSignature().Get();
     pipelineStateStream.InputLayout           = { inputLayout, 3 };
     pipelineStateStream.PrimitiveTopologyType = D3D12_PRIMITIVE_TOPOLOGY_TYPE_TRIANGLE;
-    pipelineStateStream.VS                    = { g_ImGUI_VS, sizeof( g_ImGUI_VS ) };
-    pipelineStateStream.PS                    = { g_ImGUI_PS, sizeof( g_ImGUI_PS ) };
+    pipelineStateStream.VS                    = { (const void*) g_ImGUI_VS, sizeof( g_ImGUI_VS ) };
+    pipelineStateStream.PS                    = { (const void*) g_ImGUI_PS, sizeof( g_ImGUI_PS ) };
     pipelineStateStream.RTVFormats            = renderTarget.GetRenderTargetFormats();
     pipelineStateStream.SampleDesc            = renderTarget.GetSampleDesc();
     pipelineStateStream.BlendDesc             = CD3DX12_BLEND_DESC( blendDesc );

@@ -1,15 +1,15 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/Scene.h>
+#include "../inc/dx12lib/Scene.h"
 
-#include <dx12lib/CommandList.h>
-#include <dx12lib/Device.h>
-#include <dx12lib/Material.h>
-#include <dx12lib/Mesh.h>
-#include <dx12lib/SceneNode.h>
-#include <dx12lib/Texture.h>
-#include <dx12lib/VertexTypes.h>
-#include <dx12lib/Visitor.h>
+#include "../inc/dx12lib/CommandList.h"
+#include "../inc/dx12lib/Device.h"
+#include "../inc/dx12lib/Material.h"
+#include "../inc/dx12lib/Mesh.h"
+#include "../inc/dx12lib/SceneNode.h"
+#include "../inc/dx12lib/Texture.h"
+#include "../inc/dx12lib/VertexTypes.h"
+#include "../inc/dx12lib/Visitor.h"
 
 using namespace dx12lib;
 

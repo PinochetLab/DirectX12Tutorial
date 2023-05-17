@@ -352,7 +352,7 @@ void FBXExporter::WriteHeaderExtension ()
     FBX::Node CreationTimeStamp("CreationTimeStamp");
     time_t rawtime;
     time(&rawtime);
-    struct tm * now = localtime(&rawtime);
+    struct tm* now = localtime(&rawtime);
     CreationTimeStamp.AddChild("Version", int32_t(1000));
     CreationTimeStamp.AddChild("Year", int32_t(now->tm_year + 1900));
     CreationTimeStamp.AddChild("Month", int32_t(now->tm_mon + 1));
@@ -1148,7 +1148,7 @@ void FBXExporter::WriteObjects ()
                 "Version", int32_t(101), outstream, binary, indent
             );
             char layerName[8];
-            sprintf(layerName, "COLOR_%d", colorChannelIndex);
+            sprintf_s(layerName, "COLOR_%d", colorChannelIndex);
             FBX::Node::WritePropertyNode(
                 "Name", (const char*)layerName, outstream, binary, indent
             );

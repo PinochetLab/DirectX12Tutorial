@@ -59,9 +59,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef ASSIMP_BUILD_NO_TRIANGULATE_PROCESS
 
-#include "PostProcessing/TriangulateProcess.h"
-#include "PostProcessing/ProcessHelper.h"
-#include "Common/PolyTools.h"
+#include "../PostProcessing/TriangulateProcess.h"
+#include "../PostProcessing/ProcessHelper.h"
+#include "../Common/PolyTools.h"
 
 #include <memory>
 

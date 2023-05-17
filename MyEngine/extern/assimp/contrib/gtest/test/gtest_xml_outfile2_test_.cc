@@ -32,7 +32,8 @@
 // gtest_xml_outfile2_test_ writes some xml via TestProperty used by
 // gtest_xml_outfiles_test.py
 
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
+#include "../include/gtest/internal/custom/gtest.h"
 
 class PropertyTwo : public testing::Test {
  protected:

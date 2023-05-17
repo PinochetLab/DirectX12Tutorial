@@ -41,7 +41,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_GENBOUNDINGBOXES_PROCESS
 
-#include "PostProcessing/GenBoundingBoxesProcess.h"
+#include "../PostProcessing/GenBoundingBoxesProcess.h"
 
 #include <assimp/postprocess.h>
 #include <assimp/scene.h>

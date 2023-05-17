@@ -30,7 +30,7 @@
 
 #include <wrl\client.h>
 
-#include "d3dx12.h"
+#include "../../../inc/dx12lib/d3dx12.h"
 
 using namespace DirectX;
 using Microsoft::WRL::ComPtr;

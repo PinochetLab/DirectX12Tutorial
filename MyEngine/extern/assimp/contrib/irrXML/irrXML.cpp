@@ -27,6 +27,7 @@ public:
 		: File(0), Size(0), Close(true)
 	{
 		// open file
+		#_CRT_SECURE_NO_WARNINGS
 		File = fopen(filename, "rb");
 
 		if (File)

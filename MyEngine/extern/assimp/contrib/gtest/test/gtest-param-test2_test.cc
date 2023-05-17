@@ -32,9 +32,9 @@
 // Tests for Google Test itself.  This verifies that the basic constructs of
 // Google Test work.
 
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 
-#include "test/gtest-param-test_test.h"
+#include "gtest-param-test_test.h"
 
 #if GTEST_HAS_PARAM_TEST
 

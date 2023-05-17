@@ -1,7 +1,7 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/Material.h>
-#include <dx12lib/Texture.h>
+#include "../inc/dx12lib/Material.h"
+#include "../inc/dx12lib/Texture.h"
 
 using namespace dx12lib;
 

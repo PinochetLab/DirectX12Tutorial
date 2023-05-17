@@ -1,8 +1,8 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/RenderTarget.h>
+#include "../inc/dx12lib/RenderTarget.h"
 
-#include <dx12lib/Texture.h>
+#include "../inc/dx12lib/Texture.h"
 
 using namespace dx12lib;
 
@@ -69,8 +69,8 @@ D3D12_VIEWPORT RenderTarget::GetViewport( DirectX::XMFLOAT2 scale, DirectX::XMFL
         if ( texture )
         {
             auto desc = texture->GetD3D12ResourceDesc();
-            width     = std::max( width, desc.Width );
-            height    = std::max( height, desc.Height );
+            width     = max( width, desc.Width );
+            height    = max( height, desc.Height );
         }
     }
 

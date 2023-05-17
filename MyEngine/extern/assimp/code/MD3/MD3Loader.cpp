@@ -53,8 +53,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_MD3_IMPORTER
 
-#include "MD3/MD3Loader.h"
-#include "Common/Importer.h"
+#include "../MD3/MD3Loader.h"
+#include "../Common/Importer.h"
 
 #include <assimp/SceneCombiner.h>
 #include <assimp/GenericProperty.h>

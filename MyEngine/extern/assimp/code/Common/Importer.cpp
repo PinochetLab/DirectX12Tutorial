@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 #include <assimp/version.h>
-#include <assimp/config.h>
+#include <assimp/config.h.in>
 #include <assimp/importerdesc.h>
 
 // ------------------------------------------------------------------------------------------------
@@ -64,12 +64,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // ------------------------------------------------------------------------------------------------
 // Internal headers
 // ------------------------------------------------------------------------------------------------
-#include "Common/Importer.h"
-#include "Common/BaseProcess.h"
-#include "Common/DefaultProgressHandler.h"
-#include "PostProcessing/ProcessHelper.h"
-#include "Common/ScenePreprocessor.h"
-#include "Common/ScenePrivate.h"
+#include "../Common/Importer.h"
+#include "../Common/BaseProcess.h"
+#include "../Common/DefaultProgressHandler.h"
+#include "../PostProcessing/ProcessHelper.h"
+#include "../Common/ScenePreprocessor.h"
+#include "../Common/ScenePrivate.h"
 
 #include <assimp/BaseImporter.h>
 #include <assimp/GenericProperty.h>
@@ -86,7 +86,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <assimp/DefaultIOSystem.h>
 
 #ifndef ASSIMP_BUILD_NO_VALIDATEDS_PROCESS
-#   include "PostProcessing/ValidateDataStructure.h"
+#   include "../PostProcessing/ValidateDataStructure.h"
 #endif
 
 using namespace Assimp::Profiling;

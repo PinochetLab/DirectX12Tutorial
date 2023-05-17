@@ -1,6 +1,6 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/VertexBuffer.h>
+#include "../inc/dx12lib/VertexBuffer.h"
 
 using namespace dx12lib;
 

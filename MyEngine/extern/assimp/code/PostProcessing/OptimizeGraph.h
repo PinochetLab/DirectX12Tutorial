@@ -46,8 +46,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef AI_OPTIMIZEGRAPHPROCESS_H_INC
 #define AI_OPTIMIZEGRAPHPROCESS_H_INC
 
-#include "Common/BaseProcess.h"
-#include "PostProcessing/ProcessHelper.h"
+#include "../Common/BaseProcess.h"
+#include "../PostProcessing/ProcessHelper.h"
 
 #include <assimp/types.h>
 

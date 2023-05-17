@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_GENBOUNDINGBOXES_PROCESS
 
-#include "Common/BaseProcess.h"
+#include "../Common/BaseProcess.h"
 
 namespace Assimp {
 

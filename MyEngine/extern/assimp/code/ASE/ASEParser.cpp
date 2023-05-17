@@ -49,7 +49,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_3DS_IMPORTER
 
 // internal headers
-#include "PostProcessing/TextureTransform.h"
+#include "../PostProcessing/TextureTransform.h"
 #include "ASELoader.h"
 
 #include <assimp/fast_atof.h>

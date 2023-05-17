@@ -8,7 +8,7 @@
 
 #include "../inc/dx12lib/d3dx12.h"
 
-#include "../GenerateMips_CS.h"
+#include "../../x64/Debug/GenerateMips_CS.h"
 
 using namespace dx12lib;
 
@@ -43,7 +43,8 @@ GenerateMipsPSO::GenerateMipsPSO( Device& device )
     } pipelineStateStream;
 
     pipelineStateStream.pRootSignature = m_RootSignature->GetD3D12RootSignature().Get();
-    pipelineStateStream.CS             = { g_GenerateMips_CS, sizeof( g_GenerateMips_CS ) };
+    pipelineStateStream.CS             =  { (const void*)g_GenerateMips_CS, sizeof( g_GenerateMips_CS ) };
+    //pipelineStateStream.CS = CD3DX12_PIPELINE_STATE_STREAM_CS(std::make_pair(g_GenerateMips_CS, sizeof(g_GenerateMips_CS)));
 
 
     m_PipelineState = device.CreatePipelineStateObject( pipelineStateStream );

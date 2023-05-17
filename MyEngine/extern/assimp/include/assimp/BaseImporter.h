@@ -49,9 +49,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <vector>
 #include <set>
 #include <map>
-#include <assimp/types.h>
-#include <assimp/ProgressHandler.hpp>
-#include <assimp/ai_assert.h>
+#include "../../include/assimp/types.h"
+#include "../../include/assimp/ProgressHandler.hpp"
+#include "../../include/assimp/ai_assert.h"
 
 struct aiScene;
 struct aiImporterDesc;

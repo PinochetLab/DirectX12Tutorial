@@ -24,10 +24,11 @@
  * $Id: zstream.h 1.1 1997-06-25 12:00:56+02 tyge Exp tyge $
  */
 
-#include <strstream.h>
+#include <strstream>
+#include <ostream>
 #include <string.h>
 #include <stdio.h>
-#include "zlib.h"
+#include "../../contrib/zlib/zlib.h"
 
 #if defined(_WIN32)
 #   include <fcntl.h>
@@ -68,9 +69,9 @@ class izstream
         }
 
         void open(FILE* fp) {
-            SET_BINARY_MODE(fp);
+            //SET_BINARY_MODE(fp);
             if (m_fp) close();
-            m_fp = ::gzdopen(fileno(fp), "rb");
+            //m_fp = ::gzdopen(fileno(fp), "rb");
         }
 
         /* Flushes all pending input if necessary, closes the compressed file
@@ -184,11 +185,11 @@ class ozstream
         /* open from a FILE pointer.
          */
         void open(FILE* fp, int level = Z_DEFAULT_COMPRESSION) {
-            SET_BINARY_MODE(fp);
+            //SET_BINARY_MODE(fp);
             char mode[4] = "wb\0";
             if (level != Z_DEFAULT_COMPRESSION) mode[2] = '0'+level;
             if (m_fp) close();
-            m_fp = ::gzdopen(fileno(fp), mode);
+            //m_fp = ::gzdopen(fileno(fp), mode);
         }
 
         /* Flushes all pending output if necessary, closes the compressed file
@@ -233,14 +234,14 @@ class ozstream
 
         gzFile fp() { return m_fp; }
 
-        ostream& os() {
-            if (m_os == 0) m_os = new ostrstream;
+        std::ostream& os() {
+            if (m_os == 0) m_os = new std::ostrstream;
             return *m_os;
         }
 
         void os_flush() {
             if (m_os && m_os->pcount()>0) {
-                ostrstream* oss = new ostrstream;
+                std::ostrstream* oss = new std::ostrstream;
                 oss->fill(m_os->fill());
                 oss->flags(m_os->flags());
                 oss->precision(m_os->precision());
@@ -252,7 +253,7 @@ class ozstream
 
     private:
         gzFile m_fp;
-        ostrstream* m_os;
+        std::ostrstream* m_os;
 };
 
 /*
@@ -299,7 +300,7 @@ inline ozstream& operator<(ozstream& zs, char* const& x) {
  * Ascii write with the << operator;
  */
 template <class T>
-inline ostream& operator<<(ozstream& zs, const T& x) {
+inline std::ostream& operator<<(ozstream& zs, const T& x) {
     zs.os_flush();
     return zs.os() << x;
 }

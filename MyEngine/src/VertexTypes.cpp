@@ -1,6 +1,6 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/VertexTypes.h>
+#include "../inc/dx12lib/VertexTypes.h"
 
 using namespace dx12lib;
 

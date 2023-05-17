@@ -5,16 +5,16 @@
  * original version by Kevin Ruland <kevin@rodin.wustl.edu>
  */
 
-#include "zfstream.h"
+//#include "zfstream.h"
 #include <iostream>      // for cout
 
 int main() {
 
-  gzofstream outf;
-  gzifstream inf;
-  char buf[80];
+  //gzofstream outf;
+  //gzifstream inf;
+  //char buf[80];
 
-  outf.open("test1.txt.gz");
+  /*outf.open("test1.txt.gz");
   outf << "The quick brown fox sidestepped the lazy canine\n"
        << 1.3 << "\nPlan " << 9 << std::endl;
   outf.close();
@@ -43,7 +43,7 @@ int main() {
   while (inf.getline(buf,80,'\n')) {
     std::cout << buf << "\t(" << inf.rdbuf()->in_avail() << " chars left in buffer)\n";
   }
-  inf.close();
+  inf.close();*/
 
   return 0;
 

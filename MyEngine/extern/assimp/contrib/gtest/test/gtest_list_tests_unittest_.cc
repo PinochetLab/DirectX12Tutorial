@@ -38,7 +38,7 @@
 // This program will be invoked from a Python unit test.
 // Don't run it directly.
 
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 
 // Several different test cases and tests that will be listed.
 TEST(Foo, Bar1) {

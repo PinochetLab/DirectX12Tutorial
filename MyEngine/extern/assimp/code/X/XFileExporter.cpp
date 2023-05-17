@@ -45,8 +45,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_EXPORT
 #ifndef ASSIMP_BUILD_NO_X_EXPORTER
 
-#include "X/XFileExporter.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "../X/XFileExporter.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
 #include <assimp/Bitmap.h>
 #include <assimp/BaseImporter.h>

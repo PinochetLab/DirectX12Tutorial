@@ -45,8 +45,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef AI_GENVERTEXNORMALPROCESS_H_INC
 #define AI_GENVERTEXNORMALPROCESS_H_INC
 
-#include "Common/assbin_chunks.h"
-#include "Common/BaseProcess.h"
+#include "../Common/assbin_chunks.h"
+#include "../Common/BaseProcess.h"
 
 #include <assimp/mesh.h>
 

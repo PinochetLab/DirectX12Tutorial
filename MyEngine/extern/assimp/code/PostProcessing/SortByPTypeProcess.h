@@ -45,7 +45,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef AI_SORTBYPTYPEPROCESS_H_INC
 #define AI_SORTBYPTYPEPROCESS_H_INC
 
-#include "Common/BaseProcess.h"
+#include "../Common/BaseProcess.h"
 #include <assimp/mesh.h>
 
 class SortByPTypeProcessTest;

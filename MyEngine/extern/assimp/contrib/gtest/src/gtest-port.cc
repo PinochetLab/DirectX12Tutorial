@@ -29,7 +29,7 @@
 //
 // Author: wan@google.com (Zhanyong Wan)
 
-#include "gtest/internal/gtest-port.h"
+#include "../include/gtest/internal/gtest-port.h"
 
 #include <limits.h>
 #include <stdlib.h>
@@ -37,14 +37,19 @@
 #include <string.h>
 #include <fstream>
 
-#if GTEST_OS_WINDOWS
-# include <windows.h>
-# include <io.h>
-# include <sys/stat.h>
-# include <map>  // Used in ThreadLocal.
-#else
-# include <unistd.h>
-#endif  // GTEST_OS_WINDOWS
+#include <windows.h>
+#include <io.h>
+#include <sys/stat.h>
+#include <map>
+
+//#if GTEST_OS_WINDOWS
+//# include <windows.h>
+//# include <io.h>
+//# include <sys/stat.h>
+//# include <map>  // Used in ThreadLocal.
+//#else
+//# include <unistd.h>
+//#endif  // GTEST_OS_WINDOWS
 
 #if GTEST_OS_MAC
 # include <mach/mach_init.h>
@@ -63,10 +68,10 @@
 # include <sys/types.h>
 #endif  // GTEST_OS_AIX
 
-#include "gtest/gtest-spi.h"
-#include "gtest/gtest-message.h"
-#include "gtest/internal/gtest-internal.h"
-#include "gtest/internal/gtest-string.h"
+#include "../include/gtest/gtest-spi.h"
+#include "../include/gtest/gtest-message.h"
+#include "../include/gtest/internal/gtest-internal.h"
+#include "../include/gtest/internal/gtest-string.h"
 
 // Indicates that this translation unit is part of Google Test's
 // implementation.  It must come before gtest-internal-inl.h is
@@ -74,7 +79,7 @@
 // prevent the accidental inclusion of gtest-internal-inl.h in the
 // user's code.
 #define GTEST_IMPLEMENTATION_ 1
-#include "src/gtest-internal-inl.h"
+#include "gtest-internal-inl.h"
 #undef GTEST_IMPLEMENTATION_
 
 namespace testing {

@@ -1,9 +1,9 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/ResourceStateTracker.h>
+#include "../inc/dx12lib/ResourceStateTracker.h"
 
-#include <dx12lib/CommandList.h>
-#include <dx12lib/Resource.h>
+#include "../inc/dx12lib/CommandList.h"
+#include "../inc/dx12lib/Resource.h"
 
 using namespace dx12lib;
 

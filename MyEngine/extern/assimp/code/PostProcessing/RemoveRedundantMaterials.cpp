@@ -49,7 +49,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "RemoveRedundantMaterials.h"
 #include <assimp/ParsingUtils.h>
 #include "ProcessHelper.h"
-#include "Material/MaterialSystem.h"
+#include "../Material/MaterialSystem.h"
 #include <stdio.h>
 
 using namespace Assimp;

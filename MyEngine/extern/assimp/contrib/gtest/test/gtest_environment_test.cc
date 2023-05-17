@@ -33,10 +33,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 
 #define GTEST_IMPLEMENTATION_ 1  // Required for the next #include.
-#include "src/gtest-internal-inl.h"
+#include "../src/gtest-internal-inl.h"
 #undef GTEST_IMPLEMENTATION_
 
 namespace testing {

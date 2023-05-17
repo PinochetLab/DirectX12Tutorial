@@ -31,8 +31,8 @@
 //
 // Tests that verify interaction of exceptions and death tests.
 
-#include "gtest/gtest-death-test.h"
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest-death-test.h"
+#include "../include/gtest/gtest.h"
 
 #if GTEST_HAS_DEATH_TEST
 
@@ -40,7 +40,7 @@
 #  include <windows.h>          // For RaiseException().
 # endif
 
-# include "gtest/gtest-spi.h"
+# include "../include/gtest/gtest-spi.h"
 
 # if GTEST_HAS_EXCEPTIONS
 
@@ -52,9 +52,9 @@ TEST(CxxExceptionDeathTest, ExceptionIsFailure) {
   try {
     EXPECT_NONFATAL_FAILURE(EXPECT_DEATH(throw 1, ""), "threw an exception");
   } catch (...) {  // NOLINT
-    FAIL() << "An exception escaped a death test macro invocation "
-           << "with catch_exceptions "
-           << (testing::GTEST_FLAG(catch_exceptions) ? "enabled" : "disabled");
+      FAIL() << "An exception escaped a death test macro invocation "
+          << "with catch_exceptions ";
+           //<< (testing::GTEST_FLAG(catch_exceptions) ? "enabled" : "disabled");
   }
 }
 
@@ -78,9 +78,9 @@ TEST(CxxExceptionDeathTest, PrintsMessageForStdExceptions) {
 // catch_exceptions flag does not interfere with SEH exceptions being
 // treated as death by death tests.
 TEST(SehExceptionDeasTest, CatchExceptionsDoesNotInterfere) {
-  EXPECT_DEATH(RaiseException(42, 0x0, 0, NULL), "")
-      << "with catch_exceptions "
-      << (testing::GTEST_FLAG(catch_exceptions) ? "enabled" : "disabled");
+    EXPECT_DEATH(RaiseException(42, 0x0, 0, NULL), "")
+        << "with catch_exceptions ";
+      //<< (testing::GTEST_FLAG(catch_exceptions) ? "enabled" : "disabled");
 }
 # endif
 
@@ -88,6 +88,6 @@ TEST(SehExceptionDeasTest, CatchExceptionsDoesNotInterfere) {
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  testing::GTEST_FLAG(catch_exceptions) = GTEST_ENABLE_CATCH_EXCEPTIONS_ != 0;
+  //testing::GTEST_FLAG(catch_exceptions) = GTEST_ENABLE_CATCH_EXCEPTIONS_ != 0;
   return RUN_ALL_TESTS();
 }

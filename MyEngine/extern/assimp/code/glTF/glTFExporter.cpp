@@ -42,9 +42,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_EXPORT
 #ifndef ASSIMP_BUILD_NO_GLTF_EXPORTER
 
-#include "glTF/glTFExporter.h"
-#include "glTF/glTFAssetWriter.h"
-#include "PostProcessing/SplitLargeMeshes.h"
+#include "../glTF/glTFExporter.h"
+#include "../glTF/glTFAssetWriter.h"
+#include "../PostProcessing/SplitLargeMeshes.h"
 
 #include <assimp/Exceptional.h>
 #include <assimp/StringComparison.h>

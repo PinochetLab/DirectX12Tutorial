@@ -35,4 +35,4 @@
 // in their name.  See http://qc.codegear.com/wc/qcmain.aspx?d=70977 .
 // This file serves as a workaround.
 
-#include "src/gtest-all.cc"
+#include "../src/gtest-all.cc"

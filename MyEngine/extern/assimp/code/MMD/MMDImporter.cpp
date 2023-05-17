@@ -41,11 +41,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef ASSIMP_BUILD_NO_MMD_IMPORTER
 
-#include "MMD/MMDImporter.h"
-#include "MMD/MMDPmdParser.h"
-#include "MMD/MMDPmxParser.h"
-#include "MMD/MMDVmdParser.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "../MMD/MMDImporter.h"
+#include "../MMD/MMDPmdParser.h"
+#include "../MMD/MMDPmxParser.h"
+#include "../MMD/MMDVmdParser.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
 #include <assimp/DefaultIOSystem.h>
 #include <assimp/Importer.hpp>

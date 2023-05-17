@@ -1,11 +1,12 @@
 #include "zstream.h"
 #include <math.h>
 #include <stdlib.h>
-#include <iomanip.h>
+#include <iomanip>
+#include <iostream>
 
 void main() {
     char h[256] = "Hello";
-    char* g = "Goodbye";
+    char* g = (char*)"Goodbye";
     ozstream out("temp.gz");
     out < "This works well" < h < g;
     out.close();
@@ -14,12 +15,12 @@ void main() {
     char *x = read_string(in), *y = new char[256], z[256];
     in > y > z;
     in.close();
-    cout << x << endl << y << endl << z << endl;
+    std::cout << x << std::endl << y << std::endl << z << std::endl;
 
     out.open("temp.gz"); // try ascii output; zcat temp.gz to see the results
-    out << setw(50) << setfill('#') << setprecision(20) << x << endl << y << endl << z << endl;
-    out << z << endl << y << endl << x << endl;
-    out << 1.1234567890123456789 << endl;
+    out << std::setw(50) << std::setfill('#') << std::setprecision(20) << x << std::endl << y << std::endl << z << std::endl;
+    out << z << std::endl << y << std::endl << x << std::endl;
+    out << 1.1234567890123456789 << std::endl;
 
     delete[] x; delete[] y;
 }

@@ -1,9 +1,9 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/UnorderedAccessView.h>
+#include "../inc/dx12lib/UnorderedAccessView.h"
 
-#include <dx12lib/Device.h>
-#include <dx12lib/Resource.h>
+#include "../inc/dx12lib/Device.h"
+#include "../inc/dx12lib/Resource.h"
 
 using namespace dx12lib;
 

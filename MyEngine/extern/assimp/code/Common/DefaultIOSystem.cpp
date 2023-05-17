@@ -108,7 +108,9 @@ IOStream* DefaultIOSystem::Open(const char* strFile, const char* strMode)
     ai_assert(strMode != nullptr);
     FILE* file;
 #ifdef _WIN32
-    file = ::_wfopen(Utf8ToWide(strFile).c_str(), Utf8ToWide(strMode).c_str());
+    FILE* f;
+    _wfopen_s(&f, Utf8ToWide(strFile).c_str(), Utf8ToWide(strMode).c_str());
+    file = f;
 #else
     file = ::fopen(strFile, strMode);
 #endif

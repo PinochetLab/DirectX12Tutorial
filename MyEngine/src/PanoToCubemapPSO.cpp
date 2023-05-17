@@ -1,14 +1,14 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/PanoToCubemapPSO.h>
+#include "../inc/dx12lib/PanoToCubemapPSO.h"
 
-#include <dx12lib/Device.h>
-#include <dx12lib/RootSignature.h>
+#include "../inc/dx12lib/Device.h"
+#include "../inc/dx12lib/RootSignature.h"
 
-#include <dx12lib/d3dx12.h>
+#include "../inc/dx12lib/d3dx12.h"
 
 // Compiled shader
-#include <PanoToCubemap_CS.h>
+#include "../../x64/Debug/PanoToCubemap_CS.h"
 
 using namespace dx12lib;
 
@@ -44,7 +44,7 @@ PanoToCubemapPSO::PanoToCubemapPSO( Device& device )
     } pipelineStateStream;
 
     pipelineStateStream.pRootSignature = m_RootSignature->GetD3D12RootSignature().Get();
-    pipelineStateStream.CS = { g_PanoToCubemap_CS, sizeof(g_PanoToCubemap_CS) };
+    pipelineStateStream.CS = { (const char*)g_PanoToCubemap_CS, sizeof(g_PanoToCubemap_CS) };
 
     m_PipelineState = device.CreatePipelineStateObject( pipelineStateStream );
 

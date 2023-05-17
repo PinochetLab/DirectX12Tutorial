@@ -1,9 +1,9 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/UploadBuffer.h>
+#include "../inc/dx12lib/UploadBuffer.h"
 
-#include <dx12lib/Device.h>
-#include <dx12lib/Helpers.h>
+#include "../inc/dx12lib/Device.h"
+#include "../inc/dx12lib/Helpers.h"
 
 using namespace dx12lib;
 

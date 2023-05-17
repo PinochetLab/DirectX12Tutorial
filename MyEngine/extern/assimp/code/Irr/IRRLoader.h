@@ -48,8 +48,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef AI_IRRLOADER_H_INCLUDED
 #define AI_IRRLOADER_H_INCLUDED
 
-#include "Irr/IRRShared.h"
-#include "Common/Importer.h"
+#include "../Irr/IRRShared.h"
+#include "../Common/Importer.h"
 
 #include <assimp/SceneCombiner.h>
 #include <assimp/StringUtils.h>

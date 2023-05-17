@@ -1,8 +1,8 @@
 #include "DX12LibPCH.h"
 
-#include <dx12lib/Mesh.h>
-#include <dx12lib/SceneNode.h>
-#include <dx12lib/Visitor.h>
+#include "../inc/dx12lib/Mesh.h"
+#include "../inc/dx12lib/SceneNode.h"
+#include "../inc/dx12lib/Visitor.h"
 
 #include <cstdlib>
 

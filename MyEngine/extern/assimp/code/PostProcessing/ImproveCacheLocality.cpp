@@ -49,8 +49,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 // internal headers
-#include "PostProcessing/ImproveCacheLocality.h"
-#include "Common/VertexTriangleAdjacency.h"
+#include "../PostProcessing/ImproveCacheLocality.h"
+#include "../Common/VertexTriangleAdjacency.h"
 
 #include <assimp/StringUtils.h>
 #include <assimp/postprocess.h>

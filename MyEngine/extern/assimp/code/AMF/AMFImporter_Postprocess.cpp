@@ -248,7 +248,7 @@ size_t AMFImporter::PostprocessHelper_GetTextureID_Or_Create(const std::string& 
 	for(uint8_t i = 0; i < src_texture_4check.size(); i++) converted_texture.Tiled |= src_texture_4check[i]->Tiled;
 
 	// Create format hint.
-	strcpy(converted_texture.FormatHint, "rgba0000");// copy initial string.
+	strcpy_s(converted_texture.FormatHint, "rgba0000");// copy initial string.
 	if(!pID_R.empty()) converted_texture.FormatHint[4] = '8';
 	if(!pID_G.empty()) converted_texture.FormatHint[5] = '8';
 	if(!pID_B.empty()) converted_texture.FormatHint[6] = '8';
@@ -949,7 +949,7 @@ nl_clean_loop:
 			pScene->mTextures[idx]->mHeight = static_cast<unsigned int>(tex_convd.Height);
 			pScene->mTextures[idx]->pcData = (aiTexel*)tex_convd.Data;
 			// texture format description.
-			strcpy(pScene->mTextures[idx]->achFormatHint, tex_convd.FormatHint);
+			strcpy_s(pScene->mTextures[idx]->achFormatHint, tex_convd.FormatHint);
 			idx++;
 		}// for(const SPP_Texture& tex_convd: mTexture_Converted)
 

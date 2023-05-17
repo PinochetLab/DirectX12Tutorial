@@ -42,7 +42,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef SCALE_PROCESS_H_
 #define SCALE_PROCESS_H_
 
-#include "Common/BaseProcess.h"
+#include "../Common/BaseProcess.h"
 
 struct aiNode;
 

@@ -45,7 +45,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef AI_COMPUTEUVMAPPING_H_INC
 #define AI_COMPUTEUVMAPPING_H_INC
 
-#include "Common/BaseProcess.h"
+#include "../Common/BaseProcess.h"
 
 #include <assimp/mesh.h>
 #include <assimp/material.h>

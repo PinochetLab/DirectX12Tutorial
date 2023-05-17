@@ -31,8 +31,8 @@
 
 #include <vector>
 
-#include "test/gtest-typed-test_test.h"
-#include "gtest/gtest.h"
+#include "gtest-typed-test_test.h"
+#include "../include/gtest/gtest.h"
 
 #if GTEST_HAS_TYPED_TEST_P
 

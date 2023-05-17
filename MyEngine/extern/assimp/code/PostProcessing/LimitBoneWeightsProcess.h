@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef AI_LIMITBONEWEIGHTSPROCESS_H_INC
 #define AI_LIMITBONEWEIGHTSPROCESS_H_INC
 
-#include "Common/BaseProcess.h"
+#include "../Common/BaseProcess.h"
 
 // Forward declarations
 struct aiMesh;

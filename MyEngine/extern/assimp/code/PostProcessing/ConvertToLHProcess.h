@@ -53,7 +53,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <assimp/types.h>
 
-#include "Common/BaseProcess.h"
+#include "../Common/BaseProcess.h"
 
 struct aiMesh;
 struct aiNodeAnim;

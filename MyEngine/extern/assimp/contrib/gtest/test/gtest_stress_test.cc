@@ -32,7 +32,7 @@
 // Tests that SCOPED_TRACE() and various Google Test assertions can be
 // used in a large number of threads concurrently.
 
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 
 #include <iostream>
 #include <vector>
@@ -41,7 +41,7 @@
 // gtest-internal-inl.h.  This is how Google Test prevents a user from
 // accidentally depending on its internal implementation.
 #define GTEST_IMPLEMENTATION_ 1
-#include "src/gtest-internal-inl.h"
+#include "../src/gtest-internal-inl.h"
 #undef GTEST_IMPLEMENTATION_
 
 #if GTEST_IS_THREADSAFE

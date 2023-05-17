@@ -68,7 +68,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 using namespace melange;
 
 // overload this function and fill in your own unique data
-void GetWriterInfo(int &id, String &appname) {
+void GetWriterInfo(int &id, std::string &appname) {
     id = 2424226;
     appname = "Open Asset Import Library";
 }
@@ -145,7 +145,7 @@ void C4DImporter::InternReadFile( const std::string& pFile, aiScene* pScene, IOS
     std::vector<uint8_t> mBuffer(file_size);
     file->Read(&mBuffer[0], 1, file_size);
 
-    Filename f;
+    std::Filename f;
     f.SetMemoryReadMode(&mBuffer[0], file_size);
 
     // open document first

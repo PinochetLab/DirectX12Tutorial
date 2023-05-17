@@ -45,8 +45,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_EXPORT
 #ifndef ASSIMP_BUILD_NO_STEP_EXPORTER
 
-#include "Step/StepExporter.h"
-#include "PostProcessing/ConvertToLHProcess.h"
+#include "../Step/StepExporter.h"
+#include "../PostProcessing/ConvertToLHProcess.h"
 
 #include <assimp/Bitmap.h>
 #include <assimp/BaseImporter.h>

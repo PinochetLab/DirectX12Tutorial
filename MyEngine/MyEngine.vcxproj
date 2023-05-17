@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath); $(SolutionDir);</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath); $(SolutionDir);</ExternalIncludePath>
+    <ReferencePath>$(VC_ReferencesPath_x64); $(SolutionDir);</ReferencePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64); $(SolutionDir);</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -102,9 +108,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING;GTEST_USE_OWN_TR1_TUPLE=0</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir); $(ProjectDir)/extern/assimp/include; $(ProjectDir)/extern/assimp/contrib/irrXML;D:\Education\SABER\MyEngine\MyEngine\extern\assimp\contrib\openddlparser\include;D:\Education\SABER\MyEngine\MyEngine\extern\gainput\lib\include;D:\Education\SABER\MyEngine\MyEngine\extern\assimp\contrib\rapidjson\include;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -160,7 +168,6 @@
     <ClCompile Include="extern\assimp\code\Blender\BlenderScene.cpp" />
     <ClCompile Include="extern\assimp\code\Blender\BlenderTessellator.cpp" />
     <ClCompile Include="extern\assimp\code\BVH\BVHLoader.cpp" />
-    <ClCompile Include="extern\assimp\code\C4D\C4DImporter.cpp" />
     <ClCompile Include="extern\assimp\code\CApi\AssimpCExport.cpp" />
     <ClCompile Include="extern\assimp\code\CApi\CInterfaceIOWrapper.cpp" />
     <ClCompile Include="extern\assimp\code\COB\COBLoader.cpp" />
@@ -332,75 +339,6 @@
     <ClCompile Include="extern\assimp\code\X\XFileImporter.cpp" />
     <ClCompile Include="extern\assimp\code\X\XFileParser.cpp" />
     <ClCompile Include="extern\assimp\contrib\clipper\clipper.cpp" />
-    <ClCompile Include="extern\assimp\contrib\gtest\codegear\gtest_all.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\codegear\gtest_link.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample1.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample10_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample1_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample2.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample2_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample3_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample4.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample4_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample5_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample6_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample7_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample8_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\samples\sample9_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-all.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-death-test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-filepath.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-port.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-printers.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-test-part.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest-typed-test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\src\gtest_main.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-death-test_ex_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-death-test_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-filepath_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-linked_ptr_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-listener_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-message_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-options_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-param-test2_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-param-test_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-port_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-printers_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-test-part_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-tuple_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-typed-test2_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-typed-test_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest-unittest-api_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_all_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_break_on_failure_unittest_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_catch_exceptions_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_color_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_environment_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_env_var_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_filter_unittest_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_help_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_list_tests_unittest_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_main_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_no_test_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_output_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_pred_impl_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_premature_exit_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_prod_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_repeat_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_shuffle_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_sole_header_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_stress_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_throw_on_failure_ex_test.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_throw_on_failure_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_uninitialized_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_unittest.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_xml_outfile1_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_xml_outfile2_test_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\gtest_xml_output_unittest_.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\test\production.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\xcode\Samples\FrameworkSample\widget.cc" />
-    <ClCompile Include="extern\assimp\contrib\gtest\xcode\Samples\FrameworkSample\widget_test.cc" />
     <ClCompile Include="extern\assimp\contrib\irrXML\irrXML.cpp" />
     <ClCompile Include="extern\assimp\contrib\Open3DGC\o3dgcArithmeticCodec.cpp" />
     <ClCompile Include="extern\assimp\contrib\Open3DGC\o3dgcDynamicVectorDecoder.cpp" />
@@ -433,7 +371,6 @@
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream3\test.cc" />
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream3\zfstream.cc" />
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream\test.cpp" />
-    <ClCompile Include="extern\assimp\contrib\zlib\contrib\iostream\zfstream.cpp" />
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\masmx64\inffas8664.c" />
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\minizip\ioapi.c" />
     <ClCompile Include="extern\assimp\contrib\zlib\contrib\minizip\iowin32.c" />
@@ -591,7 +528,6 @@
     <ClInclude Include="extern\assimp\code\Blender\BlenderSceneGen.h" />
     <ClInclude Include="extern\assimp\code\Blender\BlenderTessellator.h" />
     <ClInclude Include="extern\assimp\code\BVH\BVHLoader.h" />
-    <ClInclude Include="extern\assimp\code\C4D\C4DImporter.h" />
     <ClInclude Include="extern\assimp\code\CApi\CInterfaceIOWrapper.h" />
     <ClInclude Include="extern\assimp\code\COB\COBLoader.h" />
     <ClInclude Include="extern\assimp\code\COB\COBScene.h" />
@@ -755,40 +691,6 @@
     <ClInclude Include="extern\assimp\code\X\XFileImporter.h" />
     <ClInclude Include="extern\assimp\code\X\XFileParser.h" />
     <ClInclude Include="extern\assimp\contrib\clipper\clipper.hpp" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-death-test.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-message.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-param-test.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-printers.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-spi.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-test-part.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest-typed-test.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest_pred_impl.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\gtest_prod.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\custom\gtest-port.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\custom\gtest-printers.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\custom\gtest.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-death-test-internal.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-filepath.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-internal.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-linked_ptr.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-param-util-generated.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-param-util.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-port-arch.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-port.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-string.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-tuple.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\include\gtest\internal\gtest-type-util.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\prime_tables.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample1.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample2.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample3-inl.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\samples\sample4.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\src\gtest-internal-inl.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\test\gtest-param-test_test.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\test\gtest-typed-test_test.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\test\production.h" />
-    <ClInclude Include="extern\assimp\contrib\gtest\xcode\Samples\FrameworkSample\widget.h" />
     <ClInclude Include="extern\assimp\contrib\irrXML\CXMLReaderImpl.h" />
     <ClInclude Include="extern\assimp\contrib\irrXML\heapsort.h" />
     <ClInclude Include="extern\assimp\contrib\irrXML\irrArray.h" />
@@ -879,7 +781,6 @@
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\infback9\inftree9.h" />
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\iostream2\zstream.h" />
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\iostream3\zfstream.h" />
-    <ClInclude Include="extern\assimp\contrib\zlib\contrib\iostream\zfstream.h" />
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\minizip\crypt.h" />
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\minizip\ioapi.h" />
     <ClInclude Include="extern\assimp\contrib\zlib\contrib\minizip\iowin32.h" />
@@ -1057,7 +958,6 @@
     <ClInclude Include="extern\gainput\lib\source\gainput\touch\GainputInputDeviceTouchIos.h" />
     <ClInclude Include="extern\gainput\lib\source\gainput\touch\GainputInputDeviceTouchNull.h" />
     <ClInclude Include="extern\gainput\lib\source\gainput\touch\GainputTouchInfo.h" />
-    <ClInclude Include="GenerateMips_CS.h" />
     <ClInclude Include="inc\Application.h" />
     <ClInclude Include="inc\CommandQueue.h" />
     <ClInclude Include="inc\d3dx12.h" />
@@ -1125,19 +1025,38 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.5</ShaderModel>
     </FxCompile>
     <FxCompile Include="Resources\Shaders\GenerateMips_CS.hlsl">
-      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_GenerateMips_CS</VariableName>
-      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)GenerateMips_CS.h</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_1</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).h</HeaderFileOutput>
       <AssemblerOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
       </AssemblerOutputFile>
       <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
       </AssemblerOutput>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.0</ShaderModel>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)</AdditionalIncludeDirectories>
-      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)GenerateMips_CS.cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
     </FxCompile>
-    <FxCompile Include="Resources\Shaders\ImGUI_PS.hlsl" />
-    <FxCompile Include="Resources\Shaders\ImGUI_VS.hlsl" />
-    <FxCompile Include="Resources\Shaders\PanoToCubemap_CS.hlsl" />
+    <FxCompile Include="Resources\Shaders\ImGUI_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_%(Filename)</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).h</HeaderFileOutput>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)</AdditionalIncludeDirectories>
+    </FxCompile>
+    <FxCompile Include="Resources\Shaders\ImGUI_VS.hlsl">
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_%(Filename).h</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).h</HeaderFileOutput>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)</AdditionalIncludeDirectories>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Resources\Shaders\PanoToCubemap_CS.hlsl">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)</AdditionalIncludeDirectories>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">g_%(Filename).h</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).h</HeaderFileOutput>
+    </FxCompile>
     <FxCompile Include="VertexShader.hlsl">
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.5</ShaderModel>
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
@@ -1169,7 +1088,9 @@
     <None Include="extern\assimp\contrib\zlib\contrib\vstudio\vc14\zlibvc.def" />
     <None Include="extern\assimp\contrib\zlib\contrib\vstudio\vc9\zlibvc.def" />
     <None Include="extern\assimp\contrib\zlib\win32\zlib.def" />
+    <None Include="extern\assimp\contrib\zlib\zconf.h.in" />
     <None Include="extern\assimp\include\assimp\color4.inl" />
+    <None Include="extern\assimp\include\assimp\config.h.in" />
     <None Include="extern\assimp\include\assimp\material.inl" />
     <None Include="extern\assimp\include\assimp\matrix3x3.inl" />
     <None Include="extern\assimp\include\assimp\matrix4x4.inl" />
@@ -1177,6 +1098,7 @@
     <None Include="extern\assimp\include\assimp\SmoothingGroups.inl" />
     <None Include="extern\assimp\include\assimp\vector2.inl" />
     <None Include="extern\assimp\include\assimp\vector3.inl" />
+    <None Include="extern\assimp\revision.h.in" />
     <None Include="extern\DirectXTex\DirectXTex\DirectXTex.inl" />
     <None Include="extern\DirectXTex\DirectXTex\Shaders\Compiled\BC6HEncode_EncodeBlockCS.inc" />
     <None Include="extern\DirectXTex\DirectXTex\Shaders\Compiled\BC6HEncode_TryModeG10CS.inc" />

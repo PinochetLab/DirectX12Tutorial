@@ -2,10 +2,10 @@
 #ifndef zfstream_h
 #define zfstream_h
 
-#include <fstream.h>
-#include "zlib.h"
+#include <fstream>
+#include "../../contrib/zlib/zlib.h"
 
-class gzfilebuf : public streambuf {
+class gzfilebuf : public std::streambuf{
 
 public:
 
@@ -21,7 +21,7 @@ public:
 
   inline int is_open() const { return (file !=NULL); }
 
-  virtual streampos seekoff( streamoff, ios::seek_dir, int );
+  virtual std::streampos seekoff( std::streamoff, std::ios::seek_dir, int );
 
   virtual int sync();
 
@@ -41,7 +41,7 @@ private:
 
 };
 
-class gzfilestream_common : virtual public ios {
+class gzfilestream_common : virtual public std::ios {
 
   friend class gzifstream;
   friend class gzofstream;
@@ -58,32 +58,32 @@ public:
 protected:
   gzfilestream_common();
 
-private:
+public:
   gzfilebuf *rdbuf();
 
   gzfilebuf buffer;
 
 };
 
-class gzifstream : public gzfilestream_common, public istream {
+class gzifstream : public gzfilestream_common, public std::istream {
 
 public:
 
   gzifstream();
-  gzifstream( const char *name, int io_mode = ios::in );
-  gzifstream( int fd, int io_mode = ios::in );
+  gzifstream( const char *name, int io_mode = std::ios::in );
+  gzifstream( int fd, int io_mode = std::ios::in );
 
   virtual ~gzifstream();
 
 };
 
-class gzofstream : public gzfilestream_common, public ostream {
+class gzofstream : public gzfilestream_common, public std::ostream {
 
 public:
 
   gzofstream();
-  gzofstream( const char *name, int io_mode = ios::out );
-  gzofstream( int fd, int io_mode = ios::out );
+  gzofstream( const char *name, int io_mode = std::ios::out );
+  gzofstream( int fd, int io_mode = std::ios::out );
 
   virtual ~gzofstream();
 

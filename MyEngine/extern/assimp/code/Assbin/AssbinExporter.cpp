@@ -46,8 +46,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef ASSIMP_BUILD_NO_EXPORT
 #ifndef ASSIMP_BUILD_NO_ASSBIN_EXPORTER
 
-#include "Common/assbin_chunks.h"
-#include "PostProcessing/ProcessHelper.h"
+#include "../Common/assbin_chunks.h"
+#include "../PostProcessing/ProcessHelper.h"
 
 #include <assimp/version.h>
 #include <assimp/IOStream.hpp>

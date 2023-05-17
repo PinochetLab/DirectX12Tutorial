@@ -33,7 +33,7 @@
 // This file verifies Google Test event listeners receive events at the
 // right times.
 
-#include "gtest/gtest.h"
+#include "../include/gtest/gtest.h"
 #include <vector>
 
 using ::testing::AddGlobalTestEnvironment;
@@ -213,7 +213,7 @@ int main(int argc, char **argv) {
   GTEST_CHECK_(events.size() == 0)
       << "AddGlobalTestEnvironment should not generate any events itself.";
 
-  ::testing::GTEST_FLAG(repeat) = 2;
+  //::testing::GTEST_FLAG(repeat) = 2;
   int ret_val = RUN_ALL_TESTS();
 
   const char* const expected_events[] = {

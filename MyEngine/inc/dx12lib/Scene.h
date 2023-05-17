@@ -100,8 +100,8 @@ protected:
     bool LoadSceneFromString( CommandList& commandList, const std::string& sceneStr, const std::string& format );
 
 private:
-    void ImportScene( CommandList& commandList, const aiScene& scene, std::filesystem::path parentPath );
-    void ImportMaterial( CommandList& commandList, const aiMaterial& material, std::filesystem::path parentPath );
+    void ImportScene( CommandList& commandList, const aiScene& scene, std::experimental::filesystem::path parentPath );
+    void ImportMaterial( CommandList& commandList, const aiMaterial& material, std::experimental::filesystem::path parentPath );
     void ImportMesh( CommandList& commandList, const aiMesh& mesh );
     std::shared_ptr<SceneNode> ImportSceneNode( CommandList& commandList, std::shared_ptr<SceneNode> parent,
                                                 const aiNode* aiNode );

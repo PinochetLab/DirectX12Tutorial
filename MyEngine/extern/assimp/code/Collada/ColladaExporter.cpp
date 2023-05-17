@@ -173,7 +173,9 @@ void ColladaExporter::WriteHeader() {
     static const unsigned int date_nb_chars = 20;
     char date_str[date_nb_chars];
     std::time_t date = std::time(NULL);
-    std::strftime(date_str, date_nb_chars, "%Y-%m-%dT%H:%M:%S", std::localtime(&date));
+    struct tm timeinfo;
+    localtime_s(&timeinfo, &date);
+    std::strftime(date_str, date_nb_chars, "%Y-%m-%dT%H:%M:%S", &timeinfo);
 
     aiVector3D scaling;
     aiQuaternion rotation;
